@@ -1,10 +1,31 @@
 package com.myBank.app.model;
 
-public class Customer {
+import java.io.Serializable;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name="customer_details")
+public class Customer implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Column
 	private String custName;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String custId;
+	@Column
+	@NotNull
 	private long custMobileNo;
+	@Column
+	@NotNull
 	private Address currentAdd;
+	@Column
+	@NotNull
 	private Address permanentAdd;
 	
 	
