@@ -36,7 +36,9 @@ public class CustomerController {
 	@GetMapping(value = "/details",headers = "Accept=application/json,application/xml")
 	public ResponseEntity<Customer> getCustomerDetails(@RequestBody Customer customer){
 		try{
-			Customer customerObj = logInService.logInCustomer(customer);
+			if(true){
+				Customer customerObj = logInService.logInCustomer(customer);
+			}
 			return new ResponseEntity<Customer>(customerObj,HttpStatus.OK);
 		}catch(Exception e){
 			return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
