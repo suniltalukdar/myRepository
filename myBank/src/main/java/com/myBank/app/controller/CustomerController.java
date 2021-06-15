@@ -30,7 +30,9 @@ public class CustomerController {
 		}
 		
 	}
-
+	/**
+	* Create a conflict
+	*/
 	@GetMapping(value = "/details",headers = "Accept=application/json,application/xml")
 	public ResponseEntity<Customer> getCustomerDetails(@RequestBody Customer customer){
 		try{
