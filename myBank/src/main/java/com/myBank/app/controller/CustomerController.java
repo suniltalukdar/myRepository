@@ -17,7 +17,9 @@ public class CustomerController {
 
 	@Autowired
 	LogInService logInService;
-	
+	/**
+	*	Login api 
+	*/
 	@GetMapping(value = "/logIn",headers = "Accept=application/json,application/xml")
 	public ResponseEntity<Customer> getCustomer(@RequestBody Customer customer){
 		try{
